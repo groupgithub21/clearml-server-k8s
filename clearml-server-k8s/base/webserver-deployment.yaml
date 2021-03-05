@@ -59,16 +59,16 @@ spec:
         name: webserver
         resources:
           requests:
-            memory: "25M"
+            memory: "250M"
             cpu: "100m"
           limits:
-            memory: "50M"
+            memory: "500M"
             cpu: "200m"
         args:
         - webserver
         env:
         - name: NGINX_APISERVER_ADDRESS
-          value: "http://apiserver-service:8008/"
+          value: "http://192.168.180.238:30008"
       restartPolicy: Always
       nodeSelector:
         app: clearml

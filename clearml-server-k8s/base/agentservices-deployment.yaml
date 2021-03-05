@@ -39,7 +39,7 @@ spec:
         name: agentservices
         env:
         - name: CLEARML_API_HOST
-          value: "http://apiserver-service:8008"
+          value: "http://192.168.180.238:30008"
         - name: CLEARML_AGENT_DEFAULT_BASE_DOCKER
           value: "ubuntu:18.04"
         - name: CLEARML_WORKER_ID
@@ -47,12 +47,12 @@ spec:
         - name: CLEARML_AGENT_DOCKER_HOST_MOUNT
           value: "/opt/clearml/agent:/root/.clearml"
         #  Fill in the following in order set the values for clearml-agent:
-        # - name: CLEARML_HOST_IP
-        #   value: ""
-        # - name: CLEARML_WEB_HOST
-        #   value: ""
-        # - name: CLEARML_FILES_HOST
-        #   value: ""
+        - name: CLEARML_HOST_IP
+          value: "http://192.168.180.238"
+        - name: CLEARML_WEB_HOST
+          value: "http://192.168.180.238:30080"
+        - name: CLEARML_FILES_HOST
+          value: "http://192.168.180.238:30081"
         # - name: CLEARML_API_ACCESS_KEY
         #   value: ""
         # - name: CLEARML_API_SECRET_KEY
